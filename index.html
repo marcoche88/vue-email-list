@@ -23,6 +23,11 @@
                 </div>
                 <ul class="list-group text-center" v-else>
                     <li class="list-group-item" v-for="mail in mails">{{ mail }}</li>
+                    <li class="list-group-item">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button" @click="randomMails">Genera e-mail</button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
