@@ -17,7 +17,11 @@
     <div id="root" class="container p-5">
         <div class="row">
             <div class="offset-3 col-6">
-                <ul class="list-group text-center">
+                <div class="d-flex align-items-center text-primary" v-if="mails.length !== 10">
+                    <strong>Loading...</strong>
+                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                </div>
+                <ul class="list-group text-center" v-else>
                     <li class="list-group-item" v-for="mail in mails">{{ mail }}</li>
                 </ul>
             </div>
